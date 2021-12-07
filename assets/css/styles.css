@@ -18,6 +18,7 @@
 .header h1 img {
     width: 25%;
     height: 25%;
+    border: black 5px 5px 5px 5px;
 }
 
 .tenor-gif-embed {
@@ -46,20 +47,28 @@ a{
     font-weight: lighter;
     font-size: 1.55vw;
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    justify-content: space-between;
+    
 }
+
 .nav-item:hover {
     background: lightsteelblue;
     color: red;
     border-radius: 15px;
     text-shadow: none;
 }
-}
 
 .hero{
     height:700px ;
     width: 100%;
-    background-image:url("../Images/Screen/Shot/2021-12-01/at/8.30.02/PM.png");
+    background-image:url(../Images/94663.jpg);
     background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: flex-start;
+
     
 }
 
