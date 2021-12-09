@@ -1,5 +1,3 @@
-# marvel-character-researcher
-
 # Project 1 Marvel Character Research
 
 ## Purpose
