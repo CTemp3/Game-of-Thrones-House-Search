@@ -17,7 +17,7 @@ https://drive.google.com/file/d/1-d2OH0GSW9rASi1yqIt2zZHaEtcuilIQ/view?usp=shari
 
 
 ##Presentation
-Marvel Character Research Presentation
+https://docs.google.com/presentation/d/1kFGvYfQtQNDEeVzXi7FohkOgfCINUWlS-H1rNMR3LcM/edit#slide=id.p
 
 ## Contribution
 Made by Aaron Bean, Trevor Templin, and Dallas Dorton
