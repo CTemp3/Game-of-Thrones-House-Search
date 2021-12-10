@@ -1,4 +1,6 @@
-
+header {
+    display: inline-block;
+}
 .header{
     font-family: 'Marvel', sans-serif;
     color:red; 
@@ -67,7 +69,7 @@ a{
 
 .hero{
     height:700px ;
-    width: 100%;
+    width: 1530px;
     background-image:url(../Images/94663.jpg);
     background-position: center;
     background-size: cover;
