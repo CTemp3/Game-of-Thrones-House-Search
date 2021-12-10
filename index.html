@@ -40,75 +40,87 @@
       </nav>
       </div>
 
-    <!--Hero element containing background superhero image   -->
-      <div class= "hero">
+    <!-- Hero element -->
+      <div class= "hero d-flex align-items-center">
+        <div class="card text-center">
+        <h2 class="card-header" id= "Featured-Superhero">Featured Superhero</h2>
+          <div class="">
+            <img src="..." class="card-img-top" id="featured" alt="...">
+        
+            <div class="card-body">
+              <h5 class="card-title">Movies/Comic Books Superhero is Featured in</h5>
+              <p class="card-text">Movies</p>
+              <a href="#Superhero-Search" class="btn btn-primary">Search More Superheroes</a>
+            </div>
+          </div>
        </div>
+      </div>
        <br>
 
         <!-- Container with featured superhero along with comic books/movies that superhero is featured in -->
 <div class="container-fluid flex">
   <div class="row">
     <div class="col-md-6">
-    <h2 class="card-header" id= "Featured-Superhero">Featured Superhero</h2>
-        <div class="card">
-          <img src="..." class="card-img-top" alt="...">
+      <!--  <h2 class="card-header" id= "Featured-Superhero">Featured Superhero</h2>
+          <div class="card">
+            <img src="..." class="card-img-top" alt="...">
         
-          <div class="card-body">
-            <h5 class="card-title">Movies/Comic Books Superhero is Featured in</h5>
-            <p class="card-text">Movies</p>
-            <a href="#Superhero-Search" class="btn btn-primary">Search More Superheroes</a>
-          </div>
-        </div>
+            <div class="card-body">
+              <h5 class="card-title">Movies/Comic Books Superhero is Featured in</h5>
+              <p class="card-text">Movies</p>
+              <a href="#Superhero-Search" class="btn btn-primary">Search More Superheroes</a>
+            </div>
+          </div>  -->
   
   
       <br>
-      <!-- Dropdown search option including characters -->
+      <!-- options including characters -->
         <div class="container-fluid flex">
           <div class="row">
             <div class="col-md-6">
                 <h2 class="card-header" id="Superhero-Search">Find my Superhero</h2>
                 <!-- search by state -->
-                <div class="card">
+                <div class="card text-center">
                   <div id="superhero-list" class="form-group">
                     <select id="superhero-select" class="form-control">
-                      <option selected value="">Superhero Dropdown..</option>
+                      <option selected value="">Select a Super Hero</option>
                       <option value="Ant-Man">Ant-Man</option>
                       <option value="Black-Panther">Black Panther</option>
                       <option value="Black-Widow">Black Widow</option>
                       <option value="Captain-America">Captain America</option>
                       <option value="Captain-Marvel">Captain Marvel</option>
-                      <option value="Doctor-Strange">Doctor Strange</option>
-                      <option value="Groot">Groot</option>
-                      <option value="Hawkeye">Hawkeye</option>
-                      <option value="Hulk">Hulk</option>
-                      <option value="Iron-Man">Iron Man</option>
-                      <option value="Rocket">Rocket</option>
-                      <option value="Spider-Man">Spider-Man</option>
-                      <option value="Thanos">Thanos</option>
-                      <option value="Thor">Thor</option>                      
                     </select>
                     <button id='button'>Search by Superhero</button>
                     <div>
-                    <label for="exampleDataList" class="form-label">Search Input</label>
-                    <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Type to search...">
                   </div>
                 </div>
                 </div>
               </card>
             </div>
+          </div>
+        </div>
   <br>
  
   <div class="container-fluid flex">
     <div class="row">
       <div class="col-md-12">
-          <h2 class="card-header" id="Recent-Searches">Recent Searches</h2>
-          <!-- search by state -->
-          <div class="card-body">
+        <h2 class="card-header" id="Recent-Searches">Recent Searches</h2>
+        <!-- search by state -->
+        <div class="card-body">
+          <ul id="search-history">
+
+          </ul>
+        </div>
+      </div>
     </div>
-    </div>
-    </div>
-    </div>
-    </div>
-    <script src=".//assets/js/script.js"></script>
+  </div>
+</div>
+    <script src="./assets/js/script.js"></script>
 </body>
 </html>
+
+<!-- |cut code section|
+
+
+
+-->
