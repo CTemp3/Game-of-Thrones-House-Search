@@ -1,7 +1,9 @@
 var SuperheroName= document.getElementById("hero-name");
 var About= document.getElementById("description");
 var Comic= document.getElementById("comics");
+var Search=document.getElementsByClassName("Search");
 var apiUrl= "http://gateway.marvel.com/v1/public/characters?apikey=6d3560cb65781c5a6131baee6f648d19";
+
 
 
 fetch(apiUrl).then(function(response){
@@ -15,9 +17,13 @@ fetch(apiUrl).then(function(response){
             alert("there was a problem with your data pull!")
         }
     });
-
+function pull (data){
     About.p.append(data.description);
+    Comic.p.append(data.comics);
+}
 
+document.getElementByClassName("Search").addEventListener("onClick", pull);
+   
 
 var searchHistory = {};
 
