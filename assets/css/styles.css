@@ -1,6 +1,5 @@
 
 .header{
-    background-color: lightsteelblue;
     font-family: 'Marvel', sans-serif;
     color:red; 
     font-size: x-large;
@@ -8,6 +7,11 @@
     border-bottom: black 5px;
     background-image: url(../Images/pexels-hristo-fidanov-1252890.jpg);
     background-size: contain;
+    display: block;
+    padding: 15px 20px 15px 20px;
+    height: 220px;
+    margin: 0 auto;
+   
 }
 
 .header h1 {
@@ -21,6 +25,7 @@
     width: 25%;
     height: 25%;
     border: black 5px 5px 5px 5px;
+    display: inline-flex;
 }
 
 .tenor-gif-embed {
