@@ -13,7 +13,7 @@
 .header h1 {
     display: inline-block;
     margin:20px 25px 0px 25px;
-    color: red;
+    color: yellow;
     vertical-align: top;
     font-size: 75px;
 }
@@ -38,9 +38,9 @@
     margin-right: 25px;
 }
 a{
-    font-family: 'Marvel', sans-serif;
+    font-family: 'StarWars', sans-serif;
     text-decoration: none;
-    color:red;
+    color:yellow
     font-size: 25px;
     float: Right;
     text-align: center;
@@ -63,9 +63,9 @@ a{
 }
 
 .hero{
-    height:700px ;
+    height:900px ;
     width: 100%;
-    background-image:url(../Images/94663.jpg);
+    background-image:url(../Images/Star\ Wars.jpg);
     background-position: center;
     background-size: cover;
     display: flex;
