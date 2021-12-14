@@ -2,27 +2,64 @@ var SuperheroName= document.getElementById("hero-name");
 var About= document.getElementById("description");
 var Comic= document.getElementById("comics");
 var Search=document.getElementsByClassName("Search");
-var apiUrl= "http://gateway.marvel.com/v1/public/characters?apikey=6d3560cb65781c5a6131baee6f648d19";
+var Luke= "https://swapi.dev/api/people/1";
+var C3PO= "https://swapi.dev/api/people/2";
+var R2D2= "https://swapi.dev/api/people/3";
+var darthVader= "https://swapi.dev/api/people/4";
+var Leia= "https://swapi.dev/api/people/5";
 
 
 
-fetch(apiUrl).then(function(response){
+fetch(Luke).then(function(response){
     //request successful
     if (response.ok){
         response.json().then(function(data){
             console.log(data);
         });
     }
-        else{
-            alert("there was a problem with your data pull!")
-        }
     });
+
+fetch(C3PO).then(function(response){
+    //request successful
+    if (response.ok){
+        response.json().then(function(data){
+            console.log(data);
+        });
+        }
+        });
+
+fetch(R2D2).then(function(response){
+    //request successful
+    if (response.ok){
+        response.json().then(function(data){
+        console.log(data);
+    });
+    }
+    });
+    
+fetch(darthVader).then(function(response){
+    //request successful
+    if (response.ok){
+        response.json().then(function(data){
+        console.log(data);
+    });
+    }
+    }); 
+    
+fetch(Leia).then(function(response){
+    //request successful
+    if (response.ok){
+        response.json().then(function(data){
+        console.log(data);
+    });
+    }
+    }); 
 function pull (data){
     About.p.append(data.description);
     Comic.p.append(data.comics);
 }
 
-document.getElementByClassName("Search").addEventListener("onClick", pull);
+// document.getElementByClassName("Search").addEventListener("onClick", pull);
    
 
 var searchHistory = {};
