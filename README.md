@@ -1,7 +1,7 @@
-# Project 1 Marvel Character Research
+# Project 1 Star Wars Character Research
 
 ## Purpose
-The Marvel Superhero Search App allows the user to search a predefined set of characters which will return results of comic books that superhero has been featured in.  
+The Star Wars Character Search App allows the user to search a predefined set of characters which will return results of comic books and movies that character has been featured in.  
 
 ## Built With
 * HTML
