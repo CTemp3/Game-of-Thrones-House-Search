@@ -14,7 +14,8 @@ The Star Wars Character Search App allows the user to search a predefined set of
 https://drive.google.com/file/d/1-d2OH0GSW9rASi1yqIt2zZHaEtcuilIQ/view?usp=sharing
 
 ## Website
-![Uploading image.png…]()
+![image](https://user-images.githubusercontent.com/34926883/145921642-25a87895-9b9d-4ded-b6ba-1300fac998a0.png)
+
 
 ##Presentation
 https://docs.google.com/presentation/d/1kFGvYfQtQNDEeVzXi7FohkOgfCINUWlS-H1rNMR3LcM/edit#slide=id.p
