@@ -15,7 +15,7 @@ https://drive.google.com/file/d/1-d2OH0GSW9rASi1yqIt2zZHaEtcuilIQ/view?usp=shari
 
 ## Website
 ![image](https://user-images.githubusercontent.com/34926883/145921642-25a87895-9b9d-4ded-b6ba-1300fac998a0.png)
-
+https://ctemp3.github.io/starwars-character-researcher/
 
 ## Presentation
 https://docs.google.com/presentation/d/1kFGvYfQtQNDEeVzXi7FohkOgfCINUWlS-H1rNMR3LcM/edit#slide=id.g29f43f0a72_0_24
