@@ -17,8 +17,8 @@ https://drive.google.com/file/d/1-d2OH0GSW9rASi1yqIt2zZHaEtcuilIQ/view?usp=shari
 ![image](https://user-images.githubusercontent.com/34926883/145921642-25a87895-9b9d-4ded-b6ba-1300fac998a0.png)
 
 
-##Presentation
-https://docs.google.com/presentation/d/1kFGvYfQtQNDEeVzXi7FohkOgfCINUWlS-H1rNMR3LcM/edit#slide=id.p
+## Presentation
+https://docs.google.com/presentation/d/1kFGvYfQtQNDEeVzXi7FohkOgfCINUWlS-H1rNMR3LcM/edit#slide=id.g29f43f0a72_0_24
 
 ## Contribution
 Made by Aaron Bean, Trevor Templin, and Dallas Dorton
