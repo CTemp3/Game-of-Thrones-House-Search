@@ -1,6 +1,6 @@
-
 .header{
-    font-family: 'Marvel', sans-serif;
+    background-color: lightsteelblue;
+    font-family: 'Star Wars', sans-serif;
     color:red; 
     font-size: x-large;
     text-align: center;
@@ -76,4 +76,7 @@ a{
 
 #button{
     font-size: 15px;
+}
+.card {
+    background-color: rgb(183, 218, 247);
 }
