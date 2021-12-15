@@ -22,7 +22,7 @@ var princess=document.getElementById('Princess_Leia');
 var characters = [
   {
     charName: "Luke Skywalker",
-    charImage1: "",
+    charImage: "",
     birthDate:"Born: 19BBY",
     hairColor:"Hair Color: brown",
     eyeColor:"Eye Color: blue",
@@ -32,7 +32,7 @@ var characters = [
   },
   {
    charName: "C3PO",
-   charImage2:"",
+   charImage:"",
     birthDate:"Born: 49BBY",
     hairColor:"Hair Color: none",
     eyeColor:"Eye Color: yellow",
@@ -42,7 +42,7 @@ var characters = [
   },
   {
     charName: "R2-D2",
-    charImage3:"",
+    charImage:"",
     birthDate:"Born: unknown",
     hairColor:"Hair Color: none",
     eyeColor:"Eye Color: none",
@@ -52,7 +52,7 @@ var characters = [
   },
   {
     charName: "Darth Vader",
-    charImage4:"",
+    charImage:"",
     birthDate:"Born: 19BBY",
     hairColor:"Hair Color: unknown",
     eyeColor:"Eye Color: unknown",
@@ -62,7 +62,7 @@ var characters = [
   },
   {
     charName: "Leia Organa Solo",
-    charImage5:"",
+    charImage:"",
     birthDate:"Born: 19BBY",
     hairColor:"Hair Color: brown",
     eyeColor:"Eye Color: brown",
@@ -98,7 +98,7 @@ var select = document.getElementById('nav-item').addEventListener('change', func
   character.textContent=characters[this.value.charAt(0)-1].charName
   // add code for character imagvar img = document.createElement("img");
   var img1 = document.createElement("img");
-  img1.src =".//assets/Images/luke.jpg";
+  img1.src = ".//assets/Images/luke.jpg";
   var src = document.getElementById("x");
   
   src.appendChild(img1);
@@ -231,5 +231,5 @@ var select = document.getElementById('nav-item').addEventListener('change', func
   //  };
 //};
 
-//oadHistory();
+//loadHistory();
 // console.log(searchHistory);
