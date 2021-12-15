@@ -78,3 +78,6 @@ a{
 #button{
     font-size: 15px;
 }
+.card {
+    background-color: rgb(183, 218, 247);
+}

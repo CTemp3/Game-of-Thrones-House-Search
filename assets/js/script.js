@@ -23,60 +23,63 @@ var characters = [
   {
     charName: "Luke Skywalker",
     charImage1: "",
-    birthDate:"19BBY",
-    hairColor:"brown",
-    eyeColor:"blue",
-    charHeight:"172cm",
-    charWeight:"72kg",
-    charMovies:"Star Wars Episode 3: Revenge of the Sith, Star Wars Episode 4: A New Hope., Star Wars Episode 5: The Empire Strikes Back, Star Wars Episode 6: Return of the Jedi, Star Wars Episode 7: The Force Awakens, Star Wars Episode 8: The Last Jedi"
+    birthDate:"Born: 19BBY",
+    hairColor:"Hair Color: brown",
+    eyeColor:"Eye Color: blue",
+    charHeight:"Height: 172cm",
+    charWeight:"Weight:72kg",
+    charMovies:"Movies Associated: Star Wars Episode 3: Revenge of the Sith, Star Wars Episode 4: A New Hope., Star Wars Episode 5: The Empire Strikes Back, Star Wars Episode 6: Return of the Jedi, Star Wars Episode 7: The Force Awakens, Star Wars Episode 8: The Last Jedi"
   },
   {
    charName: "C3PO",
    charImage2:"",
-    birthDate:"49BBY",
-    hairColor:"none",
-    eyeColor:"yellow",
-    charHeight:"182cm",
-    charWeight:"54kg",
-    charMovies:"Star Wars Episode 1: The Phantom Menace, Star Wars Episode 2: Attack of the Clones, Star Wars Episode 3: Revenge of the Sith, Star Wars Episode 4: A New Hope., Star Wars Episode 5: The Empire Strikes Back, Star Wars Episode 6: Return of the Jedi, Star Wars Episode 7: The Force Awakens, Star Wars Episode 8: The Last Jedi, Star Wars Episode 9: Rise of Skywalker"
+    birthDate:"Born: 49BBY",
+    hairColor:"Hair Color: none",
+    eyeColor:"Eye Color: yellow",
+    charHeight:"Height: 182cm",
+    charWeight:"Weight: 54kg",
+    charMovies:"Movies Associated: Star Wars Episode 1: The Phantom Menace, Star Wars Episode 2: Attack of the Clones, Star Wars Episode 3: Revenge of the Sith, Star Wars Episode 4: A New Hope., Star Wars Episode 5: The Empire Strikes Back, Star Wars Episode 6: Return of the Jedi, Star Wars Episode 7: The Force Awakens, Star Wars Episode 8: The Last Jedi, Star Wars Episode 9: Rise of Skywalker"
   },
   {
     charName: "R2-D2",
     charImage3:"",
-    birthDate:"unknown",
-    hairColor:"none",
-    eyeColor:"none",
-    charHeight:"91cm",
-    charWeight:"45kg",
-    charMovies:"Star Wars Episode 1: The Phantom Menace, Star Wars Episode 2: Attack of the Clones, Star Wars Episode 3: Revenge of the Sith, Star Wars Episode 4: A New Hope., Star Wars Episode 5: The Empire Strikes Back, Star Wars Episode 6: Return of the Jedi, Star Wars Episode 7: The Force Awakens, Star Wars Episode 8: The Last Jedi, Star Wars Episode 9: Rise of Skywalker"
+    birthDate:"Born: unknown",
+    hairColor:"Hair Color: none",
+    eyeColor:"Eye Color: none",
+    charHeight:"Height: 91cm",
+    charWeight:"Weight: 45kg",
+    charMovies:"Movies Associated: Star Wars Episode 1: The Phantom Menace, Star Wars Episode 2: Attack of the Clones, Star Wars Episode 3: Revenge of the Sith, Star Wars Episode 4: A New Hope., Star Wars Episode 5: The Empire Strikes Back, Star Wars Episode 6: Return of the Jedi, Star Wars Episode 7: The Force Awakens, Star Wars Episode 8: The Last Jedi, Star Wars Episode 9: Rise of Skywalker"
   },
   {
     charName: "Darth Vader",
     charImage4:"",
-    birthDate:"19BBY",
-    hairColor:"unknown",
-    eyeColor:"unknown",
-    charHeight:"248cm",
-    charWeight:"181kg",
-    charMovies:"Star Wars Episode 3: Revenge of the Sith, Star Wars Episode 4: A New Hope., Star Wars Episode 5: The Empire Strikes Back, Star Wars Episode 6: Return of the Jedi"
+    birthDate:"Born: 19BBY",
+    hairColor:"Hair Color: unknown",
+    eyeColor:"Eye Color: unknown",
+    charHeight:"Height: 248cm",
+    charWeight:"Weight: 181kg",
+    charMovies:"Movies Associated: Star Wars Episode 3: Revenge of the Sith, Star Wars Episode 4: A New Hope., Star Wars Episode 5: The Empire Strikes Back, Star Wars Episode 6: Return of the Jedi"
   },
   {
     charName: "Leia Organa Solo",
     charImage5:"",
-    birthDate:"19BBY",
-    hairColor:"brown",
-    eyeColor:"brown",
-    charHeight:"144cm",
-    charWeight:"45kg",
-    charMovies:"Star Wars Episode 3: Revenge of the Sith, Star Wars Episode 4: A New Hope., Star Wars Episode 5: The Empire Strikes Back, Star Wars Episode 6: Return of the Jedi, Star Wars Episode 7: The Force Awakens, Star Wars Episode 8: The Last Jedi, Star Wars Episode 9: Rise of Skywalker"
+    birthDate:"Born: 19BBY",
+    hairColor:"Hair Color: brown",
+    eyeColor:"Eye Color: brown",
+    charHeight:"Height: 144cm",
+    charWeight:"Weight: 45kg",
+    charMovies:"Movies Associated: Star Wars Episode 3: Revenge of the Sith, Star Wars Episode 4: A New Hope., Star Wars Episode 5: The Empire Strikes Back, Star Wars Episode 6: Return of the Jedi, Star Wars Episode 7: The Force Awakens, Star Wars Episode 8: The Last Jedi, Star Wars Episode 9: Rise of Skywalker"
   },
   ]
 
-var charImage1=document.getElementById("x").src = ".//assets/Images/luke.jpg";
-var charImage2=document.getElementById("x").src =".//assets/Images/C-3PO_EP3.png"
-var charImage3=document.getElementById("x").src=".//assets/Images/220px-R2-D2_Droid.png"
-var charImage4=document.getElementById("x").src=".//assets/Images/Darth_Vader_in_The_Empire_Strikes_Back.jpg"
-var charImage5=document.getElementById("x").src=".//assets/Images/Princess_Leia's_characteristic_hairstyle.jpg/"
+
+
+
+//var charImage1=document.getElementById("x").src = ".//assets/Images/luke.jpg";
+//var charImage2=document.getElementById("x").src =".//assets/Images/C-3PO_EP3.png"
+//var charImage3=document.getElementById("x").src=".//assets/Images/220px-R2-D2_Droid.png"
+//var charImage4=document.getElementById("x").src=".//assets/Images/Darth_Vader_in_The_Empire_Strikes_Back.jpg"
+//var charImage5=document.getElementById("x").src=".//assets/Images/Princess_Leia's_characteristic_hairstyle.jpg/"
    
 
 var character = document.getElementById('featured-character')
@@ -94,16 +97,11 @@ var select = document.getElementById('nav-item').addEventListener('change', func
   console.log('You selected: ', this.value.charAt(0));
   character.textContent=characters[this.value.charAt(0)-1].charName
   // add code for character imagvar img = document.createElement("img");
-
-
-
-  var img = document.createElement("img");
-  img.src =".//assets/Images/luke.jpg";
+  var img1 = document.createElement("img");
+  img1.src =".//assets/Images/luke.jpg";
   var src = document.getElementById("x");
   
-  src.appendChild(img);
-
-
+  src.appendChild(img1);
 
   heroAge.textContent=characters[this.value.charAt(0)-1].birthDate
   heroHair.textContent=characters[this.value.charAt(0)-1].hairColor
@@ -113,6 +111,7 @@ var select = document.getElementById('nav-item').addEventListener('change', func
   heroMovies.textContent=characters[this.value.charAt(0)-1].charMovies
   // add code for additional character details
 });
+
 
  // fetch(Luke).then(function(response){
     //request successful
