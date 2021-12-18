@@ -1,0 +1,136 @@
+html {
+    font-family: "Game of Thrones", Times, serif;
+    cursor: pointer;
+  }
+
+#container {
+    color:black;
+    background: rgb(173, 167, 157);
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 55px;
+    border-radius: 10px;
+    border: solid black 5px;
+}
+header {
+    cursor: pointer;
+}
+
+nav {
+    text-align: center;
+    background-color: rgb(66, 104, 66);
+    height: 50px;
+    width: 100%;
+    border: black solid 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 10px;
+    cursor: pointer;    
+}
+
+
+#coatstark {
+    border-radius: 30px;
+    background-color: rgb(173, 167, 157);
+    color: rgb(40, 65, 82) ;
+    border: 3px solid black;
+    height: 100%;
+    width: 100px;
+    cursor: pointer;
+}
+
+#coatstark:hover {
+    background-color:white;
+    cursor: pointer;
+}
+
+#wordstark {
+    border-radius: 30px;
+    background-color:  rgb(173, 167, 157);
+    color: rgb(40, 65, 82);
+    border: 3px solid black;
+    height: 100%;
+    width: 100px;
+    cursor: pointer;
+}
+
+#wordstark:hover {
+    background-color:white;
+    cursor: pointer;
+}
+
+#founstark {
+    border-radius: 30px;
+    background-color:  rgb(173, 167, 157);
+    color: rgb(40, 65, 82);
+    border: 3px solid black;
+    height: 100%;
+    width: 100px;
+    cursor: pointer;
+}
+
+#founstark:hover {
+    background-color:white;
+    cursor: pointer;
+}
+
+#registark {
+    border-radius: 30px;
+    background-color:  rgb(173, 167, 157);
+    color: rgb(40, 65, 82);
+    border: 3px solid black;
+    height: 100%;
+    width: 100px;
+    cursor: pointer;
+}
+
+#registark:hover {
+    background-color:white;
+    cursor: pointer;
+}
+
+#goback {
+    border-radius: 30px;
+    background-color:  rgb(173, 167, 157);
+    color: rgb(40, 65, 82);
+    border: 3px solid black;
+    height: 100%;
+    width: 100px;
+    cursor: pointer;
+}
+
+#goback:hover {
+    background-color:white ;
+    cursor: pointer;
+}
+
+body {
+    background-color: black;
+}
+
+footer {
+    background-color:rgb(40, 65, 82) ;
+    text-align: center;
+    height: 100px;
+    width: 100%;
+    border: black solid 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 10px;
+
+}
+a {
+    color: rgb(173, 167, 157) ;
+}
+#aa {
+    color: rgb(173, 167, 157) ;
+
+}
+

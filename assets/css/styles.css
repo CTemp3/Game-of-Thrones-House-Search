@@ -1,74 +1,48 @@
 html {
     font-family: "Game of Thrones", Times, serif;
-}
-
-#selector {
-    width: 80%;
-    height:80%;
-    justify-content: center;
-}
-
-
-
-header {
-    background-color: wheat ;
-    border-bottom: 5px rgb(151, 33, 33);
-}
-
-#container {
-    color:black;
-    background: wheat;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 55px;
   }
-
-
-.maincontainer {
-    position: absolute;
-    width: 250px;
-    height: 320px;
-    background: grey;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-.thecard {
-    position: relative;
+  
+  header {
+    background-color: #331c0e ;
+    color: black;
     width: 100%;
-    height: 100px;
-    transform-style: preserve-3d;
-    transition: all 0.5s ease;
-}
-
-.thefront {
-    position:absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    background: rgb(255, 254, 254);
-    color: maroon;
-    text-align: center;
-}
-.theback {
-    position:absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    background: rgb(255, 254, 254);
-    color: maroon;
-    text-align: center;
-    transform: rotateY(180deg);
-}
-#nav {
+    border-radius: 10px;
+    border: black solid 5px;
+  }
+  
+   #container {
+      color: #67331e;
+      background: #fff190;
+      width: 100%;
+      height: 150px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 55px;
+      border-radius: 10px;
+      border: solid black 5px;
+  }
+  nav {
+  text-align: center;
+      background-color: rgb(182, 10, 10);
+      height: 50px;
+      width: 100%;
+      border: black solid 5px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      justify-content: space-evenly;
+      border-radius: 10px;
+  
+  }
+  
+  
+  #nav {
     width:100%;
     margin:0 auto;
     list-style:none;
     }
-
+  
     .table {
         display: table;   /* Allow the centering to work */
         margin: 0 auto;
@@ -82,15 +56,15 @@ header {
         ul#horizontal-list li {
             display: inline;
         }
-
-#nav ul {
+  
+  #nav ul {
     width: 100%;
     height: 100%;
     text-align: center;
     list-style: none;
     float: right;
-}
-
+  }
+  
     #nav li {
     float:left;
     }
@@ -100,3 +74,124 @@ header {
     width:150px; /* fixed width */
     text-decoration:none; 
     }
+    .box{
+      background-color: lightgrey;
+      width: 350px;
+      height: 250px;
+      border: 15px solid green;
+      padding: 50px;
+      margin: 20px;
+      position: relative;
+    }
+    .child {
+      position: absolute;
+    }
+  
+    .child::before {
+      content: "";
+      background-image: url("C:/Users/arbea/Desktop/project1a/assets/images/House-Baratheon-Main-Shield.PNG.png");
+      background-size: cover;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        left: 0px;
+        opacity: 0.5;
+    }
+    .step {
+      width: 200px;
+      height: 200px;
+      display: block;
+      position: relative;
+  
+    }
+    .step::after {
+      content: "";
+      background: url();
+      opacity: 0.5;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      position: absolute;
+      z-index: -1;   
+    }
+    .controls {
+      visibility: hidden;
+      opacity: 0.5;
+      width: 400px;
+      border-radius: 10px;
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      margin-left: -200px;
+      background-color: black;
+      box-shadow: 3px 3px 5px black;
+      transition: 1s all;
+      display: flex;
+    }
+    
+    .player:hover .controls, player:focus .controls {
+      opacity: 1;
+    }
+    @font-face {
+      font-family: 'Game of Thrones' Times, serif;
+      src: url('fonts/heydings_controls-webfont.eot');
+      src: url('fonts/heydings_controls-webfont.eot?#iefix') format('embedded-opentype'),
+           url('fonts/heydings_controls-webfont.woff') format('woff'),
+           url('fonts/heydings_controls-webfont.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+   }
+   
+   button:before {
+     font-family: 'Game of Thrones' Times, serif;
+     font-size: 20px;
+     position: relative;
+     content: attr(data-icon);
+     color: #aaa;
+     text-shadow: 1px 1px 0px black;
+   }
+   .timer {
+    line-height: 38px;
+    font-size: 10px;
+    font-family: monospace;
+    text-shadow: 1px 1px 0px black;
+    color: white;
+    flex: 5;
+    position: relative;
+  }
+  
+  .timer div {
+    position: absolute;
+    background-color: rgba(255,255,255,0.2);
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 38px;
+    z-index: 2;
+  }
+  
+  .timer span {
+    position: absolute;
+    z-index: 3;
+    left: 19px;
+  }
+  div.player {
+    background-color: black;
+  }
+  footer {
+    list-style: none;
+    text-align: center;
+    background-color: #b9540c;
+    color: #fcfef0;
+    border-radius: 10px;
+    border: solid black 5px;
+  
+  }
+  footer ul {
+    list-style: none;
+  }
+  main {
+    background-color: #c38d5f;
+  }
