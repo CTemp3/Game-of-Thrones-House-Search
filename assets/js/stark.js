@@ -1,74 +1,90 @@
-//const url = fetch("https://game-of-thrones-quotes.herokuapp.com/v1/random")
- // .then(response => response.json())
- // .then(data => console.log(data));
-
- // window.localStorage.setItem("url", JSON.stringify(url))
-
- // let newobject = window.localStorage.getItem(url);
- // console.log(url)
-
- // const quotes = [
- //     "If I fall, don't bring me back. --John Snow ",
- //     "There is only one war that matters. The Great War. And it is here. --John Snow",
- //     "Love is the death of duty. --John Snow",
- //     "Everything before the word \"but\" is horseshit.--John Snow",
- //     "The war is not over. And I promise you, friend, the true enemy won't wait out the storm. He brings the storm. --John Snow",
- //     "I hate the king more than any of them. --Sansa Stark",
- //     "No need to seize the last word, Lord Baelish. I'll assume it was something clever. --Sansa Stark",
- //     "The man who passes the sentence should swing the sword.--Ned Stark",
- //     "Winter is coming! --Ned Stark",
- //     "I, Eddard of the house Stark, lord of Winterfell and warden of the North, sentence you to die. --Ned Stark",
-//      "A madman sees what he sees.--Ned stark",
- //     "I grew up with soldiers. I learned how to die a long time ago .--Ned Stark"
- //   ]
- // function getQuote() {
- //     for(let i=0; i <quotes.length ; i++) {
-         
-
- //     }
- // }
- // let quote= getQuote ();
- // let result;
-
- // const interval = setInterval(() => {
- //     result = quote.next();
- //       result.done === false ? console.log(result.value) : clearInterval(interval);
- // }, 15000);
- // document.getElementById("aa").innerHTML.quotes
- import { useState , useEffect } from 'react' ;
-
- function App () {
-     const [quotes, setQuotes] = useState(null);
-
-     useEffect(() => {
-         getData();
-     //"sentence"
-
-     async function getData() {
-         const response = await fetch("https://game-of-thrones-quotes.herokuapp.com/v1/random");
-        const data = await response.json();
-        
-        setQuotes(data);
-
-     }
-    }, []);
-    
-    return  (
-        <div>
-            <h1></h1>
-       
-            {quotes && (
-                <div className="quotes">
-
-                    {quotes.map((quote, index) => (
-                        <div key={index}>
-                            <h2>{quotes.sentence}</h2>
-                </div>
-                    ))}
-
-        </div>
-            )}
-
-    </div>
-    
-    )
+// Global Variable used to store the quotes 
+// fetched from the API
+var data;
+let front = true;
+  
+// Getting the front and the back author boxes
+const authors = document.querySelectorAll(".author");
+  
+// Getting the front and the back texts
+const texts = document.querySelectorAll(".text");
+  
+// Getting the body
+const body = document.getElementById("body");
+  
+// Getting the buttons
+const button = document.querySelectorAll(".new-quote");
+  
+const blockFront = document.querySelector(".block__front");
+const blockBack = document.querySelector(".block__back");
+  
+const authorFront = authors[0];
+const authorBack = authors[1];
+  
+const textFront = texts[0];
+const textBack = texts[1];
+  
+const buttonFront = button[0];
+const buttonBack = button[1];
+  
+  
+// An arrow function used to get a quote randomly
+const displayQuote = () =>{
+  
+    // Generates a random number between 0 
+    // and the length of the dataset
+    let index = Math.floor(Math.random()*data.length);
+  
+    // Stores the quote present at the randomly generated index
+    let quote = data[index].name;
+  
+    // Stores the author of the respective quote
+    let author = data[index].quotes;
+  
+    // Making the author anonymous if no author is present
+    if(!author){
+        author = "Anonymous"
+    }
+  
+    // Replacing the current quote and the author with a new one
+  
+    if(front){
+        // Changing the front if back-side is displayed
+        textFront.innerHTML = quote;
+        authorFront.innerHTML = author;
+    }else{
+        // Changing the back if front-side is displayed
+        textBack.innerHTML = quote;
+        authorBack.innerHTML = author;
+    }
+      
+    front = !front;
+  
+}
+  
+// Fetching the quotes from the type.fit API using promises
+fetch("https://game-of-thrones-quotes.herokuapp.com/v1/characters")
+    .then(function(response) {
+        return response.json(); 
+    }) // Getting the raw JSON data
+    .then(function(data) {
+  
+        // Storing the quotes internally upon 
+        // successful completion of request
+        this.data = data; 
+  
+        // Displaying the quote When the Webpage loads
+        displayQuote() 
+});
+  
+  
+// Adding an onclick listener for the button
+function newQuote(){
+      
+    // Rotating the Quote Box
+    blockBack.classList.toggle('rotateB');
+    blockFront.classList.toggle('rotateF');
+  
+    // Displaying a new quote when the webpage loads
+    displayQuote();
+}
