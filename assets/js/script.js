@@ -1,161 +1,90 @@
-// curl "https://www.anapioficeandfire.com/api/houses/7" arryn
- //curl "https://www.anapioficeandfire.com/api/houses/15" baratheon
- //curl "https://www.anapioficeandfire.com/api/houses/169" greyjoy
- //curl "https://www.anapioficeandfire.com/api/houses/229" lannister
-
- //curl "https://www.anapioficeandfire.com/api/houses/362" stark
- //curl "https://www.anapioficeandfire.com/api/houses/378" targaryen
- //curl "https://www.anapioficeandfire.com/api/houses/395" tully
-
- const card = document.getElementById("thecard")
- card.addEventListener("click", flipCard);
- function flipCard () {
-     card.classList.toggle(flipCard);
- }
- //if stark is pushed
- myFunction_s();
- 
- function myFunction_s () {
-     let st = fetch("https://game-of-thrones-quotes.herokuapp.com/v1/character/jon");
-     document.getElementById("thefront").innerHTML = typeof st;
-     console.log(st);
- }   
- 
- myFunction_t();
- 
- function myFunction_t () {
-     let ta = fetch("https://game-of-thrones-quotes.herokuapp.com/v1/character/daenerys");
-     document.getElementById("thefront").innerHTML = typeof ta;
-     console.log(ta);
- 
- }   
- 
- myFunction_l();
- 
- function myFunction_l () {
-     let la = fetch("https://game-of-thrones-quotes.herokuapp.com/v1/character/tyrion");
-     document.getElementById("lannister").innerHTML = typeof la;
-     console.log(la);
- 
- }
- 
- myFunction_g();
- 
- function myFunction_g () {
-     let gr = fetch("https://game-of-thrones-quotes.herokuapp.com/v1/character/theon");
-     document.getElementById("greyjoy").innerHTML = typeof gr;
-     console.log(gr);
- 
- }
- 
- myFunction_b();
- 
- function myFunction_b () {
-     let ba = fetch("https://game-of-thrones-quotes.herokuapp.com/v1/character/robert");
-     document.getElementById("baratheon").innerHTML = typeof ba;
-     console.log(ba);
- 
- }
- 
- 
- 
- 
- 
- //
- //function myFunction () {
- //    let fl = fetch("https://anapioficeandfire.com/api/houses/362")
- //    document.getElementById("flipB").innerHTML= typeof fl + "  " +fl;
- //    console.log(fl);
- //}
- //then a quote shoud display in the card
- 
- // const address = fetch("https://anapioficeandfire.com/api/houses/362")
- //  .then((response) => response.json())
- //  .then((user) => {
- //    return user.address;
- //  });
- 
- //const printAddress = () => {
- //  address.then((a) => {
- //    console.log(a);
- //  });
- //};
- 
- //printAddress();
- 
- 
- 
- 
- 
- 
- //myFunction_s();
- 
- //function myFunction_s () {
- //    let st = fetch("https://anapioficeandfire.com/api/houses/362");
- //    document.getElementById("stark").innerHTML = typeof st + "   " + st;
- //    console.log(st);
- 
- //}   
- 
- //myFunction_t();
- 
- //function myFunction_t () {
- //    let ta = fetch("https://anapioficeandfire.com/api/houses/378");
- //    document.getElementById("targaryen").innerHTML = typeof ta + "   " + ta;
- //    console.log(ta);
- 
- //}   
- 
- //myFunction_l();
- 
- //function myFunction_l () {
- //    let la = fetch("https://anapioficeandfire.com/api/houses/229");
- //    document.getElementById("lannister").innerHTML = typeof la + "   " + la;
- //    console.log(la);
- 
- //}
- 
- //myFunction_g();
- 
- //function myFunction_g () {
- //    let gr = fetch("https://anapioficeandfire.com/api/houses/169");
- //    document.getElementById("greyjoy").innerHTML = typeof gr + "   " + gr;
- //    console.log(gr);
- 
- //}
- 
- //myFunction_b();
- 
- //function myFunction_b () {
- //    let ba = fetch("https://anapioficeandfire.com/api/houses/15");
- //    document.getElementById("baratheon").innerHTML = typeof ba + "   " + ba;
- //    console.log(ba);
- 
- //}
- 
- //myFunction_m();
- 
- //function myFunction_m () {
- //   let ma = fetch("https://anapioficeandfire.com/api/houses");
- //   document.getElementById("martell").innerHTML = typeof ma + "   " + ma;
- //   console.log(ma);
- 
- //}
- 
- //myFunction_a();
- 
- //function myFunction_a () {
- //    let ar = fetch("https://anapioficeandfire.com/api/houses/7");
- //    document.getElementById("arryn").innerHTML = typeof ar + "   " + ar;
- //    console.log(ar);
- 
- //}
- 
- //myFunction_tu();
- 
- //function myFunction_tu () {
- //    let tu = fetch("https://anapioficeandfire.com/api/houses/395");
- //    document.getElementById("tully").innerHTML = typeof tu + "   " + tu;
- //    console.log(tu);
- 
- //}
+// Global Variable used to store the quotes 
+// fetched from the API
+var data;
+let front = true;
+  
+// Getting the front and the back author boxes
+const authors = document.querySelectorAll(".author");
+  
+// Getting the front and the back texts
+const texts = document.querySelectorAll(".text");
+  
+// Getting the body
+const body = document.getElementById("body");
+  
+// Getting the buttons
+const button = document.querySelectorAll(".new-quote");
+  
+const blockFront = document.querySelector(".block__front");
+const blockBack = document.querySelector(".block__back");
+  
+const authorFront = authors[0];
+const authorBack = authors[1];
+  
+const textFront = texts[0];
+const textBack = texts[1];
+  
+const buttonFront = button[0];
+const buttonBack = button[1];
+  
+  
+// An arrow function used to get a quote randomly
+const displayQuote = () =>{
+  
+    // Generates a random number between 0 
+    // and the length of the dataset
+    let index = Math.floor(Math.random()*data.length);
+  
+    // Stores the quote present at the randomly generated index
+    let quote = data[index].name;
+  
+    // Stores the author of the respective quote
+    let author = data[index].quotes;
+  
+    // Making the author anonymous if no author is present
+    if(!author){
+        author = "Anonymous"
+    }
+  
+    // Replacing the current quote and the author with a new one
+  
+    if(front){
+        // Changing the front if back-side is displayed
+        textFront.innerHTML = quote;
+        authorFront.innerHTML = author;
+    }else{
+        // Changing the back if front-side is displayed
+        textBack.innerHTML = quote;
+        authorBack.innerHTML = author;
+    }
+      
+    front = !front;
+  
+}
+  
+// Fetching the quotes from the type.fit API using promises
+fetch("https://game-of-thrones-quotes.herokuapp.com/v1/characters")
+    .then(function(response) {
+        return response.json(); 
+    }) // Getting the raw JSON data
+    .then(function(data) {
+  
+        // Storing the quotes internally upon 
+        // successful completion of request
+        this.data = data; 
+  
+        // Displaying the quote When the Webpage loads
+        displayQuote() 
+});
+  
+  
+// Adding an onclick listener for the button
+function newQuote(){
+      
+    // Rotating the Quote Box
+    blockBack.classList.toggle('rotateB');
+    blockFront.classList.toggle('rotateF');
+  
+    // Displaying a new quote when the webpage loads
+    displayQuote();
+}
