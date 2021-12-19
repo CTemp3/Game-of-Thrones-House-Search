@@ -33,30 +33,102 @@
 	<link href=
 "https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap"
 		rel="stylesheet">
+
+        <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<link rel="stylesheet" 
+              href=
+"https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" 
+              integrity=
+"sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" 
+              crossorigin="anonymous" />
+
 	
 </head>
-    
-</head>
+<body>
 
 <header class="pointer">
-    <nav id="nav">
-        <button id="coatstark" onclick="">Coat of arms</button>
-        <button id="wordstark" onclick="">Words</button>
-        <button id="founstark" onclick="">Founded</button>
-        <button id="registark" onclick="">Region</button>
-        <button id="notable"> <a href=".//index.html">go back</a></button>   
-    </nav>
+</section>
     <div id="container">
      
        <h1>House Stark</h1>
     </div>
 </header>
 <body>
-    <div id="body">
-    <iframe width="1280" height="720" src="https://www.youtube.com/embed/QUETCm2Z5-w?list=PLdyYtz46NolawmMFnQObNvSjUG0kwfFnm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
-</body>
+    
+    <h2 style="text-align:center">Notable Members</h2>
 
+    <div class="row">
+      <div class="column">
+        <img src="https://thronesapi.com/assets/images/jon-snow.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+      </div>
+      <div class="column">
+        <img src="https://thronesapi.com/assets/images/arya-stark.jpg" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+      </div>
+      <div class="column">
+        <img src="https://thronesapi.com/assets/images/sansa-stark.jpeg" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+      </div>
+      <div class="column">
+        <img src="https://thronesapi.com/assets/images/ned-stark.jpg"width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+      </div>" style=
+    </div>
+    
+    <div id="myModal" class="modal">
+      <span class="close cursor" onclick="closeModal()">&times;</span>
+      <div class="modal-content">
+    
+        <div class="mySlides">
+          <div class="numbertext">1 / 4</div>
+          <img src="https://thronesapi.com/assets/images/jon-snow.jpg" style="width:100%">
+        </div>
+    
+        <div class="mySlides">
+          <div class="numbertext">2 / 4</div>
+          <img src="https://thronesapi.com/assets/images/arya-stark.jpg" style="width:100%">
+        </div>
+    
+        <div class="mySlides">
+          <div class="numbertext">3 / 4</div>
+          <img src="https://thronesapi.com/assets/images/sansa-stark.jpeg" style="width:100%">
+        </div>
+        
+        <div class="mySlides">
+          <div class="numbertext">4 / 4</div>
+          <img src="https://thronesapi.com/assets/images/ned-stark.jpg" style="width:100%">
+        </div>
+        
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    
+        <div class="caption-container">
+          <p id="caption"></p>
+        </div>
+        <div class="column">
+    
+    
+          <img class="demo cursor" src="https://thronesapi.com/assets/images/jon-snow.jpg" style="width:100%" onclick="currentSlide(1)" alt="Nature and sunrise">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="https://thronesapi.com/assets/images/arya-stark.jpg" style="width:100%" onclick="currentSlide(2)" alt="Snow">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="https://thronesapi.com/assets/images/sansa-stark.jpeg" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="https://thronesapi.com/assets/images/ned-stark.jpg" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
+        </div>
+      </div>
+    </div>
+
+<div class="content">
+    <h3>House Stark Coat of Arms</h3>
+  <img src=".//assets/Images/House-Stark-Main-Shield.PNG.png"/> </div>
 
 
 <footer>
@@ -66,3 +138,19 @@
 </h1>
 </footer>
 <script  src="./assets/js/stark.js"></script>
+<script src=
+"https://code.jquery.com/jquery-3.3.1.slim.min.js" 
+                integrity=
+"sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" 
+                crossorigin="anonymous"></script>
+        <script src=
+"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+                integrity=
+"sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" 
+                crossorigin="anonymous"></script>
+        <script src=
+"https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" 
+                integrity=
+"sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" 
+                crossorigin="anonymous"></script>
+            </body>
