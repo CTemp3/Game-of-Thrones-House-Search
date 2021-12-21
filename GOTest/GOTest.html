@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" crossorigin="anonymous"></script>
+<style>
+
+body,h1,h5 {font-family: "game of thrones", times serif}
+body, html {height: 100%;
+background-image: url("https://static.wikia.nocookie.net/gameofthrones/images/9/97/The_Wall_from_the_south.jpg/revision/latest/scale-to-width-down/1000?cb=20150323201042");
+  min-height: 100%;
+  background-position: center;
+  background-size: cover;
+}
+
+button 
+
+.bgimg {
+  background-image: url("https://static.wikia.nocookie.net/gameofthrones/images/9/97/The_Wall_from_the_south.jpg/revision/latest/scale-to-width-down/1000?cb=20150323201042");
+  min-height: 100%;
+  background-position: center;
+  background-size: cover;
+}
+
+.quote-box{
+    padding:3rem;
+    transition: 0.5s;
+    transition-timing-function: ease-in;
+  }
+    
+  .text{
+    font-size:30px;
+    padding-left:10px;
+    transition: 0.5s;
+    transition-timing-function: ease-in;
+    font-family: 'Roboto', sans-serif;
+    background-image: linear-gradient(to right bottom,  #67331e, #ffedbca8);
+    color: transparent;
+    -webkit-background-clip: text;
+  }
+  
+  .quote{
+    transition: 0.5s;
+    transition-timing-function: ease-in;
+  }
+  
+  .new-quote{
+      font-size:15px;
+      border-radius: 5px;
+      cursor:pointer;
+      padding-bottom: 8px;
+      padding-top: 9px;
+      margin-top: 5px;
+      background-image: linear-gradient(to right bottom,#67331e, #ffedbca8);
+  }
+  
+  .text-center{
+    text-align: center;
+  }
+    
+  .new-quote:hover{
+    opacity: 0.6;
+  }
+  
+  .author{
+    margin:10px;
+    font-size:20px;
+    transition: 0.5s;
+    transition-timing-function: ease-in;
+    font-family: 'Open Sans Condensed', sans-serif;
+    background-image: linear-gradient(to right bottom, #28313B,#485461
+    );
+    color: transparent;
+    -webkit-background-clip: text;
+  }
+    
+
+  
+  .block {
+  perspective: 150rem;
+  position: absolute;
+  top:25%;
+  left: 27%;
+  }
+  
+  .block__main {
+    min-width: 45vw;
+    position: absolute;
+    transition: all .8s ease;
+    backface-visibility: hidden;
+    box-shadow: 0rem 1.5rem 4rem rgba(0, 0, 0, 0.15);
+    border-radius: .5rem; 
+    background-image: linear-gradient(to right bottom, #F6F0EA,#F1DFD1);
+  }
+  
+  .block__back {
+    transform: rotateY(180deg); 
+  }
+  
+  .rotateF{
+  transform: rotateY(-180deg);
+  }
+  
+  .rotateB{
+  transform: rotate(0deg);
+  }
+
+  /* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+ {
+  box-sizing: border-box;
+}
+
+.row > .column {
+  padding: 0 8px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.column {
+  float: left;
+  width: 25%;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  width: 90%;
+  max-width: 1200px;
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.mySlides {
+  display: none;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+img {
+  margin-bottom: -4px;
+}
+
+.caption-container {
+  text-align: center;
+  background-color: black;
+  padding: 2px 16px;
+  color: white;
+}
+
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+img.hover-shadow {
+  transition: 0.3s;
+}
+
+.hover-shadow:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+</style>
+<body>
+  <header>
+
+   <div>
+
+            <!-- Quote Box -->
+            <div class="block text-center">
+        
+            <!-- Front part of the Quote Box -->
+            <div class = "quote-box block__main block__front">
+        
+            <!-- Quote to be Displayed Here -->
+            <span class = "quote">
+                
+                <!-- Hyphen is Displayed -->
+                <i class="fas fa-2x fa-quote-left"></i>
+        
+                <!-- Quote Text -->
+                <span class = "text">
+                Quote To be Displayed Here
+                </span>
+        
+            </span>
+                
+            <!-- Author to be Displayed Here -->
+            <div class = "author">
+                Author to be Displayed Here
+            </div>
+            <a class = "new-quote btn btn-default"
+                onclick="newQuote()">New Quote</a>
+            </div>
+        
+            <!-- Back Part of the Quote Box -->
+            <div class = "quote-box block__main block__back">
+        
+            <!-- Quote to be Displayed Here -->
+            <span class = "quote">
+                
+                <!-- Hyphen is Displayed -->
+                <i class="fas fa-2x fa-quote-left"></i>
+        
+                <!-- Quote Text -->
+                <span class = "text">
+                Quote To be Displayed Here
+                </span>
+        
+            </span>
+                
+            <!-- Author to be Displayed Here -->
+            <div class = "author">
+                Author to be Displayed Here
+            </div>
+                <!-- Button -->
+                <a class = "new-quote btn btn-default "
+                    onclick="newQuote()">New Quote</a>
+            </div>
+        </div>
+        </div>
+
+  </header>
+
+<div class="bgimg w3-display-container w3-text-white">
+  <div class="w3-display-middle w3-jumbo">
+    <img src="https://www.designmantic.com/blog/wp-content/uploads/2016/05/Game-of-Thrones-Logo-718x300.jpg" alt="" height="100%" width="100%">
+  </div>
+  <div class="w3-display-topleft w3-container w3-xlarge">
+    <p id="button"><button onclick="document.getElementById('houses').style.display='block'" class="w3-button w3-black">Noble Houses</button></p>
+    <p  id="button"><button onclick="document.getElementById('sevenkingdoms').style.display='block'" class="w3-button w3-black">Seven Kingdoms</button></p>
+    <p id="button"><button onclick="document.getElementById('continents').style.display='block'" class="w3-button w3-black">Continents</button></p>
+    <p id="button"><button onclick="document.getElementById('books').style.display='block'" class="w3-button w3-black">Read the Books</button></p>
+    <p id="button"><button onclick="document.getElementById('tvseries').style.display='block'" class="w3-button w3-black">Watch the Series</button></p>
+ 
+  </div>
+
+
+</div>
+  <div class="w3-display-bottomleft w3-container">
+    <a href="dothraki.html" class="w3-button w3-black"><button> to Kal Drogo</button></a>
+    <a href="dragon.html" class="w3-button w3-black"><button> to Mother of Dragons</button></a>
+  </div>
+</div>
+
+<!-- houses Modal -->
+<div id="houses" class="w3-modal">
+  <div class="w3-modal-content w3-animate-zoom">
+    <div class="w3-container w3-black w3-display-container">
+      <span onclick="document.getElementById('houses').style.display='none'" class="w3-button w3-display-topright w3-large">x</span>
+      <h1>Notable Houses</h1>
+    </div>
+    <div class="row">
+      <div class="column">
+        <img src=".//images/house-stark.png" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+      </div>
+      <div class="column">
+        <img src="images/house-targaryen.png" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+      </div>
+      <div class="column">
+        <img src="images/house-lannister.png" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+      </div>
+      <div class="column">
+        <img src="images/House-Barethon.jpg" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+      </div>
+      <div class="column">
+        <img src="images/house-greyjoy.jpg" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+      </div>
+      <div class="column">
+        <img src="images/house-tyrell.jpg" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+      </div>
+      <div class="column">
+        <img src="images/House-Martell.jpg" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+      </div>
+    </div>
+    <div>
+
+      <div id="myModal" class="modal">
+        <span class="close cursor" onclick="closeModal()">&times;</span>
+        <div class="modal-content">
+      
+          <div class="mySlides">
+            <div class="numbertext">1 / 4</div>
+            <img src="images/house-stark.png" style="width:100%">
+          </div>
+      
+          <div class="mySlides">
+            <div class="numbertext">2 / 4</div>
+            <img src="images/house-targaryen.png" style="width:100%">
+          </div>
+      
+          <div class="mySlides">
+            <div class="numbertext">3 / 4</div>
+            <img src="images/house-lannister.png" style="width:100%">
+          </div>
+          
+          <div class="mySlides">
+            <div class="numbertext">4 / 4</div>
+            <img src="images/House-Barethon.jpg" style="width:100%">
+          </div>
+
+          <div class="mySlides">
+            <div class="numbertext">4 / 4</div>
+            <img src="images/house-greyjoy.jpg" style="width:100%">
+          </div>
+          
+          
+          <div class="mySlides">
+            <div class="numbertext">4 / 4</div>
+            <img src="images/house-tyrell.jpg" style="width:100%">
+          </div>
+
+          <div class="mySlides">
+            <div class="numbertext">4 / 4</div>
+            <img src="images/House-Martell.jpg" style="width:100%">
+          </div>
+
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      
+          <div class="caption-container">
+            <p id="caption"></p>
+          </div>
+
+          <div class="column">
+            <img class="demo cursor" src="images/house-stark.png" style="width:100%" onclick="currentSlide(1)" alt="Nature and sunrise">
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="images/house-targaryen.png" style="width:100%" onclick="currentSlide(2)" alt="Snow">
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="images/house-lannister.png" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="images/House-Barethon.jpg" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="images/house-greyjoy.jpg" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="images/house-tyrell.jpg" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="images/House-Martell.jpg" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
+          </div>
+        </div>
+      </div>
+      
+ 
+      
+   
+
+    </div>
+
+
+
+<footer>
+  <div>
+
+   
+
+
+</footer>
+
+<script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<script src="./GOTest.js"></script>
+
+</body>
+</html>
+

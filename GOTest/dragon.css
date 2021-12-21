@@ -1,0 +1,93 @@
+
+
+body {
+    
+    margin: 0;
+    background-image: url("https://static.wikia.nocookie.net/iron-throne-roleplay5113/images/1/1d/Valyriangods.jpg/revision/latest/scale-to-width-down/1000?cb=20170628090341");
+    font-family: 'game of thrones' times, serif;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.container-center {
+    max-width: 700px;
+    margin: auto;
+    border-radius: 25px;
+}
+
+nav {
+    background-color: rgb(76, 76, 158);
+    background-image: linear-gradient(rgb(76, 76, 158), rgba(32, 32, 59, 0.822));
+    color: white;
+    padding: 0.5rem;
+    text-align: center;
+    border-radius: 25px;
+}
+
+nav h1 {
+    font-size: 55px;
+}
+
+textarea {
+    display: block;
+    height: 20vh;
+    width: 80%;
+    margin: 2rem auto;
+    border: 2px solid black;
+    padding: 1rem;
+    font-size: large;
+    border-radius: 25px;
+}
+
+button {
+    display: block;
+    padding: 1rem;
+    background-color: rgb(76, 76, 158);
+    color: white;
+    font-family: inherit;
+    border-radius: 12px;
+    transition-duration: 0.4s;
+}
+
+button:hover {
+    background-color: grey;
+    color: black;
+}
+
+#txt-output {
+    display: block;
+    height: 20vh;
+    width: 80%;
+    margin: 2rem auto;
+    border: 2px solid black;
+    padding: 1rem;
+    font-size: large;
+    background-color: white;
+    border-radius: 25px;
+}
+
+footer {
+    text-align: center;
+    width: 100%;
+    background-color: var(--primary-color);
+    padding: 0.5rem 0rem;
+    color: white;
+}
+
+footer a {
+    text-decoration: none;
+    background-color: white;
+    color: var(--primary-color);
+    padding: 0rem 0.5rem;
+}
+p {
+    font-size: 30px;
+    font-weight: bolder;
+    color: black; 
+}
+#tran {
+    color: white;
+}
