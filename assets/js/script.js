@@ -199,37 +199,37 @@ var select = document.getElementById('nav-item').addEventListener('change', func
       //princess.addEventListener("onClick", pushLeia);
    
 
-//var searchHistory = {};
+var searchHistory = {};
 
 
 // create history function
-//var createHistory = function(historyItem) {
- //   var historyLi = $("<li>")
-   //     .addClass("list-group-item");
-   // var historyP = $("<p>")
-    //    .addClass("m-6")
-    //    .text(historyItem);
+var createHistory = function(histItem) {
+   var historyLi = $("<li>")
+       .addClass("list-group-item");
+   var historyP = $("<p>")
+       .addClass("m-6")
+       .text(histItem);
 
-    //historyLi.append(historyP);
+    historyLi.append(historyP);
 
-    //$("#list-" + historyList).append(historyLi);
+    $("#list-" + historyList).append(historyLi);
 
-//};
+};
 
 // save history function
-//var saveHistory = function() {
-  //  localStorage.setItem("history", JSON.stringify(searchHistory));
-//};
+var saveHistory = function() {
+   localStorage.setItem("history", JSON.stringify(searchHistory));
+};
 
 // search history call function
-//var loadHistory = function() {
-    // calling history items
-  //  searchHistory = JSON.parse(localStorage.getItem("searchHistory"));
+var loadHistory = function() {
+  // calling history items
+   searchHistory = JSON.parse(localStorage.getItem("searchHistory"));
 
-    //if (!searchHistory) {
-     //   searchHistory = {}
-  //  };
-//};
+    if (!searchHistory) {
+       searchHistory = {}
+   };
+};
 
-//loadHistory();
-// console.log(searchHistory);
+loadHistory();
+console.log(searchHistory);
