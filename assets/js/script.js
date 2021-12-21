@@ -1,201 +1,87 @@
-
-//var Luke= "https://swapi.dev/api/people/1/";
-//var C3PO= "https://swapi.dev/api/people/2/";
-//var R2D2= "https://swapi.dev/api/people/3/";
-//var darthVader= "https://swapi.dev/api/people/4/";
-//var Leia= "https://swapi.dev/api/people/5/";
-
-var skywalker= document.getElementById('Skywalker');
-var friend= document.getElementById('C3P0');
-var r2=document.getElementById('R2-D2');
-var darth=document.getElementById('Darth');
-var princess=document.getElementById('Princess_Leia');
-
-//if Luke is selected from drop down box
-
-
-//if skywalker is selected  then Function()
-//Function = on click fetch data and save it to local storage
-//after saving then condense info needed
-//display data in html card
-
-var characters = [
-  {
-    charName: "Luke Skywalker",
-    charImage: "",
-    birthDate:"Born: 19BBY",
-    hairColor:"Hair Color: brown",
-    eyeColor:"Eye Color: blue",
-    charHeight:"Height: 172cm",
-    charWeight:"Weight:72kg",
-    charMovies:"Movies Associated: Star Wars Episode 3: Revenge of the Sith, Star Wars Episode 4: A New Hope., Star Wars Episode 5: The Empire Strikes Back, Star Wars Episode 6: Return of the Jedi, Star Wars Episode 7: The Force Awakens, Star Wars Episode 8: The Last Jedi"
-  },
-  {
-   charName: "C3PO",
-   charImage:"",
-    birthDate:"Born: 49BBY",
-    hairColor:"Hair Color: none",
-    eyeColor:"Eye Color: yellow",
-    charHeight:"Height: 182cm",
-    charWeight:"Weight: 54kg",
-    charMovies:"Movies Associated: Star Wars Episode 1: The Phantom Menace, Star Wars Episode 2: Attack of the Clones, Star Wars Episode 3: Revenge of the Sith, Star Wars Episode 4: A New Hope., Star Wars Episode 5: The Empire Strikes Back, Star Wars Episode 6: Return of the Jedi, Star Wars Episode 7: The Force Awakens, Star Wars Episode 8: The Last Jedi, Star Wars Episode 9: Rise of Skywalker"
-  },
-  {
-    charName: "R2-D2",
-    charImage:"",
-    birthDate:"Born: unknown",
-    hairColor:"Hair Color: none",
-    eyeColor:"Eye Color: none",
-    charHeight:"Height: 91cm",
-    charWeight:"Weight: 45kg",
-    charMovies:"Movies Associated: Star Wars Episode 1: The Phantom Menace, Star Wars Episode 2: Attack of the Clones, Star Wars Episode 3: Revenge of the Sith, Star Wars Episode 4: A New Hope., Star Wars Episode 5: The Empire Strikes Back, Star Wars Episode 6: Return of the Jedi, Star Wars Episode 7: The Force Awakens, Star Wars Episode 8: The Last Jedi, Star Wars Episode 9: Rise of Skywalker"
-  },
-  {
-    charName: "Darth Vader",
-    charImage:"",
-    birthDate:"Born: 19BBY",
-    hairColor:"Hair Color: unknown",
-    eyeColor:"Eye Color: unknown",
-    charHeight:"Height: 248cm",
-    charWeight:"Weight: 181kg",
-    charMovies:"Movies Associated: Star Wars Episode 3: Revenge of the Sith, Star Wars Episode 4: A New Hope., Star Wars Episode 5: The Empire Strikes Back, Star Wars Episode 6: Return of the Jedi"
-  },
-  {
-    charName: "Leia Organa Solo",
-    charImage:"",
-    birthDate:"Born: 19BBY",
-    hairColor:"Hair Color: brown",
-    eyeColor:"Eye Color: brown",
-    charHeight:"Height: 144cm",
-    charWeight:"Weight: 45kg",
-    charMovies:"Movies Associated: Star Wars Episode 3: Revenge of the Sith, Star Wars Episode 4: A New Hope., Star Wars Episode 5: The Empire Strikes Back, Star Wars Episode 6: Return of the Jedi, Star Wars Episode 7: The Force Awakens, Star Wars Episode 8: The Last Jedi, Star Wars Episode 9: Rise of Skywalker"
-  },
-  ]
-
-
-
-
-//var charImage1=document.getElementById("x").src = ".//assets/Images/luke.jpg";
-//var charImage2=document.getElementById("x").src =".//assets/Images/C-3PO_EP3.png"
-//var charImage3=document.getElementById("x").src=".//assets/Images/220px-R2-D2_Droid.png"
-//var charImage4=document.getElementById("x").src=".//assets/Images/Darth_Vader_in_The_Empire_Strikes_Back.jpg"
-//var charImage5=document.getElementById("x").src=".//assets/Images/Princess_Leia's_characteristic_hairstyle.jpg/"
-   
-
-var character = document.getElementById('featured-character')
-
-var charImage=document.getElementById("charImage")
-var heroName = document.getElementById('hero-name')
-var heroAge=document.getElementById("hero-age")
-var heroHair=document.getElementById("hero-hair")
-var heroEye=document.getElementById("hero-eye")
-var heroHeight=document.getElementById("hero-height")
-var heroWeight=document.getElementById("hero-weight")
-var heroMovies=document.getElementById("hero-movies")
-
-var select = document.getElementById('nav-item').addEventListener('change', function() {
-  console.log('You selected: ', this.value.charAt(0));
-  character.textContent=characters[this.value.charAt(0)-1].charName
-  // add code for character imagvar img = document.createElement("img");
-  var img1 = document.createElement("img");
-  img1.src = ".//assets/Images/luke.jpg";
-  var src = document.getElementById("x");
+// Global Variable used to store the quotes 
+// fetched from the API
+var data;
+let front = true;
   
-  src.appendChild(img1);
-
-  heroAge.textContent=characters[this.value.charAt(0)-1].birthDate
-  heroHair.textContent=characters[this.value.charAt(0)-1].hairColor
-  heroEye.textContent=characters[this.value.charAt(0)-1].eyeColor
-  heroHeight.textContent=characters[this.value.charAt(0)-1].charHeight
-  heroWeight.textContent=characters[this.value.charAt(0)-1].charWeight
-  heroMovies.textContent=characters[this.value.charAt(0)-1].charMovies
-  // add code for additional character details
+// Getting the front and the back author boxes
+const authors = document.querySelectorAll(".author");
+  
+// Getting the front and the back texts
+const texts = document.querySelectorAll(".text");
+  
+// Getting the body
+const body = document.getElementById("body");
+  
+// Getting the buttons
+const button = document.querySelectorAll(".new-quote");
+  
+const blockFront = document.querySelector(".block__front");
+const blockBack = document.querySelector(".block__back");
+  
+const authorFront = authors[0];
+const authorBack = authors[1];
+  
+const textFront = texts[0];
+const textBack = texts[1];
+  
+const buttonFront = button[0];
+const buttonBack = button[1];
+  
+  
+// An arrow function used to get a quote randomly
+const displayQuote = () =>{
+  
+    // Generates a random number between 0 
+    // and the length of the dataset
+    let index = Math.floor(Math.random()*data.length);
+  
+    // Stores the quote present at the randomly generated index
+    let quote = data[index].name;
+  
+    // Stores the author of the respective quote
+    let author = data[index].quotes;
+  
+    // Making the author anonymous if no author is present
+    if(!author){
+        author = "Anonymous"
+    }
+  
+    // Replacing the current quote and the author with a new one
+  
+    if(front){
+        // Changing the front if back-side is displayed
+        textFront.innerHTML = quote;
+        authorFront.innerHTML = author;
+    }else{
+        // Changing the back if front-side is displayed
+        textBack.innerHTML = quote;
+        authorBack.innerHTML = author;
+    }
+      
+    front = !front;
+  
+}
+  
+// Fetching the quotes from the type.fit API using promises
+fetch("https://game-of-thrones-quotes.herokuapp.com/v1/characters")
+    .then(function(response) {
+        return response.json(); 
+    }) // Getting the raw JSON data
+    .then(function(data) {
+  
+        // Storing the quotes internally upon 
+        // successful completion of request
+        this.data = data; 
+  
+        // Displaying the quote When the Webpage loads
+        displayQuote() 
 });
-
-
- // fetch(Luke).then(function(response){
-    //request successful
-   // if (response.ok){
-     //   response.json().then(function(data){
-       //     console.log(data);
-       // });
-   // }
-   // });
-
-//then fetch data
-//fetch(Luke).then(function(response){
-    //request successful
-  //  if (response.ok){
-    //    response.json().then(function(data){
-      //      console.log(data);
-        //});
-  //  }
-    //});
-//save api date to local storage
-
-//function pushSkywalker(){
-  //    About.append (Luke.name);
-//}
-
-//skywalker.addEventListener("onClick", pushSkywalker);
-
-//fetch(C3PO).then(function(response){
-    //request successful
-  //  if (response.ok){
-    //    response.json().then(function(data){
-      //      console.log(data);
-      //  });
-      //  }
-      //  });
-  //  function pushC3PO(){
-    //    About.append (C3PO.name);
-     // }
-      
-     // friend.addEventListener("onClick", pushC3PO);
-
-//fetch(R2D2).then(function(response){
-    //request successful
-  //  if (response.ok){
-    //    response.json().then(function(data){
-      //  console.log(data);
-   // });
-   // }
-   // });
- 
-//    function pushR2D2(){
-  //      About.append (R2D2.name);
-    //  }
-      
-    //  r2.addEventListener("onClick", pushR2D2);
-
-  //fetch(darthVader).then(function(response){
-    //request successful
-    //if (response.ok){
-      //  response.json().then(function(data){
-        //console.log(data);
-    //});
-   // }
-   // }); 
   
-//    function pushDarth(){
-  //      About.append (darthVader.name);
-    //  }
+  
+// Adding an onclick listener for the button
+function newQuote(){
       
-   //   darth.addEventListener("onClick", pushDarth);
-
-//fetch(Leia).then(function(response){
-    //request successful
-  //  if (response.ok){
-    //    response.json().then(function(data){
-      //  console.log(data);
-   // });
-   // }
-   // }); 
-
-    //function pushLeia(){
-      //  About.append (Leia.name);
-     // }
-      
+<<<<<<< HEAD
       //princess.addEventListener("onClick", pushLeia);
    
 
@@ -233,3 +119,12 @@ var loadHistory = function() {
 
 loadHistory();
 console.log(searchHistory);
+=======
+    // Rotating the Quote Box
+    blockBack.classList.toggle('rotateB');
+    blockFront.classList.toggle('rotateF');
+  
+    // Displaying a new quote when the webpage loads
+    displayQuote();
+}
+>>>>>>> 17e2adb44cd55f41a55f76e97d4c91af603de008
