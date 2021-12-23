@@ -81,45 +81,6 @@ fetch("https://game-of-thrones-quotes.herokuapp.com/v1/characters")
 // Adding an onclick listener for the button
 function newQuote(){
       
-<<<<<<< HEAD
-      //princess.addEventListener("onClick", pushLeia);
-   
-
-var searchHistory = {};
-
-
-// create history function
-var createHistory = function(histItem) {
-   var historyLi = $("<li>")
-       .addClass("list-group-item");
-   var historyP = $("<p>")
-       .addClass("m-6")
-       .text(histItem);
-
-    historyLi.append(historyP);
-
-    $("#list-" + historyList).append(historyLi);
-
-};
-
-// save history function
-var saveHistory = function() {
-   localStorage.setItem("history", JSON.stringify(searchHistory));
-};
-
-// search history call function
-var loadHistory = function() {
-  // calling history items
-   searchHistory = JSON.parse(localStorage.getItem("searchHistory"));
-
-    if (!searchHistory) {
-       searchHistory = {}
-   };
-};
-
-loadHistory();
-console.log(searchHistory);
-=======
     // Rotating the Quote Box
     blockBack.classList.toggle('rotateB');
     blockFront.classList.toggle('rotateF');
@@ -127,4 +88,3 @@ console.log(searchHistory);
     // Displaying a new quote when the webpage loads
     displayQuote();
 }
->>>>>>> 17e2adb44cd55f41a55f76e97d4c91af603de008
